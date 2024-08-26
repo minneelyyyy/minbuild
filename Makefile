@@ -2,8 +2,7 @@
 OBJS = src/main.o \
 	src/subcommands/subcommands.o \
 	src/subcommands/build.o \
-	src/subcommands/clean.o \
-	src/subcommands/help.o
+	src/subcommands/clean.o
 
 all: minbuild
 

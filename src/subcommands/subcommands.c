@@ -1,4 +1,4 @@
-#include <stddef.h>
+#include <stdio.h>
 #include <string.h>
 
 #include <common.h>
@@ -21,4 +21,16 @@ const struct subcommand *get_subcommand(const char *name) {
             return &subcommands[i];
 
     return NULL;
+}
+
+int help(int argc, char **argv) {
+    size_t i;
+
+    printf("USAGE: minbuild <subcommand> [args...]\n\n");
+
+    for (i = 0; i < sizeof_arr(subcommands); i++) {
+        printf("    %s\t%s\n", subcommands[i].name, subcommands[i].description);
+    }
+
+    return 0;
 }

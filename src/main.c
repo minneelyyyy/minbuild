@@ -4,7 +4,7 @@
 #include "subcommands/subcommands.h"
 
 int main(int argc, char **argv) {
-	struct subcommand *cmd;
+	const struct subcommand *cmd;
 
 	if (argc < 2)
 		return help(argc - 1, argv + 1);
