@@ -29,7 +29,7 @@ int help(int argc, char **argv) {
     printf("USAGE: minbuild <subcommand> [args...]\n\n");
 
     for (i = 0; i < sizeof_arr(subcommands); i++) {
-        printf("    %s\t%s\n", subcommands[i].name, subcommands[i].description);
+        printf("    %-8s  %s\n", subcommands[i].name, subcommands[i].description);
     }
 
     return 0;
